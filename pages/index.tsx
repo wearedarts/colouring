@@ -7,11 +7,11 @@ import { Container, Page, Section } from '../components/Layout';
 const Header = styled.header`
   ${Section}
   background-color: ${(props) => props.theme.colours.orange};
-  flex-basis: 8rem;
+  flex-basis: 10rem;
 
   img {
     display: block;
-    height: 4rem;
+    height: 6rem;
   }
 `;
 
@@ -20,8 +20,13 @@ const Main = styled.main`
   flex-grow: 1;
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     text-align: center;
+    margin: 2rem 0;
+  }
+
+  h2 {
+    font-size: 1.8rem;
     margin: 2rem 0;
   }
 `;
@@ -37,8 +42,9 @@ const Content = styled.div`
 const GameArea = styled.div`
   aspect-ratio: calc(4 / 3);
   background-color: ${(props) => props.theme.colours.cream};
+  background-image: url(/preview.png);
   margin: 1rem;
-  max-width: 600px;
+  max-width: 800px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -46,15 +52,15 @@ const GameArea = styled.div`
   a {
     align-items: center;
     align-self: flex-end;
-    background-color: ${(props) => props.theme.colours.blue};
+    background-color: ${(props) => props.theme.colours.green};
     color: ${(props) => props.theme.colours.cream};
     display: flex;
     font-weight: 500;
-    height: 3rem;
     justify-content: center;
     margin-bottom: 2rem;
     text-decoration: none;
-    width: 5rem;
+    font-size: 2rem;
+    padding: 1rem 2rem;
 
     &:focus {
       outline: 3px solid ${(props) => props.theme.colours.orange};
