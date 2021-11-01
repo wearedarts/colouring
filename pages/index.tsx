@@ -104,7 +104,7 @@ export default function Index() {
       <Main>
         <Container>
           <Content>
-            <h1>colouring game name</h1>
+            <h1>colouring</h1>
             <GameArea>
               <Link href='/game' passHref>
                 Play
