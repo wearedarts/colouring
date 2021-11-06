@@ -143,8 +143,8 @@ export const GlobalStyle = createGlobalStyle`
   //
 
   body {
-    background-color: ${(props) => props.theme.colours.purple};
-    color: ${(props) => props.theme.colours.cream};
+    background-color: ${(props) => props.theme.colours.white};
+    color: ${(props) => props.theme.colours.grey};
     font-family: Poppins, sans-serif;
     font-size: 100%;
 
@@ -156,6 +156,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
+    color: ${(props) => props.theme.colours.green};
     font-size: 100%;
     font-style: normal;
     font-weight: bold;

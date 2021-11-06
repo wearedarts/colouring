@@ -12,7 +12,7 @@ interface colourButtonProps {
 
 const Button = styled.button`
   padding: 0;
-  border: 1px solid ${(props) => props.theme.colours.grey_dark};
+  border: 1px solid ${(props) => props.theme.colours.grey};
   border-radius: 1rem;
   align-items: center;
   display: flex;
@@ -32,7 +32,7 @@ const Swatch = styled.div<{ bgCol: Colour; active: Boolean }>`
   border-radius: 0.8rem;
   ${(props) =>
     props.active
-      ? `border: 3px solid ${props.theme.colours.grey_dark}`
+      ? `border: 3px solid ${props.theme.colours.grey}`
       : `border: 3px solid transparent`}
 `;
 
