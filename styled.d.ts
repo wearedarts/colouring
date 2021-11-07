@@ -4,10 +4,10 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     colours: {
       cream: string;
-      purple: string;
+      plum: string;
       turquoise: string;
       turquoise_dark: string;
-      green: string;
+      teal: string;
       pink: string;
 
       blue: string;

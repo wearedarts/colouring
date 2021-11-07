@@ -6,7 +6,7 @@ import { Container, Page, Section } from '../components/Layout';
 
 const Header = styled.header`
   ${Section}
-  background-color: ${(props) => props.theme.colours.green};
+  background-color: ${(props) => props.theme.colours.teal};
   flex-basis: 8rem;
   border-top: 1rem solid ${(props) => props.theme.colours.turquoise};
 
@@ -48,7 +48,7 @@ const GameArea = styled.div`
   a {
     align-items: center;
     align-self: flex-end;
-    background-color: ${(props) => props.theme.colours.green};
+    background-color: ${(props) => props.theme.colours.teal};
     color: ${(props) => props.theme.colours.cream};
     display: flex;
     font-weight: 500;
@@ -72,7 +72,7 @@ const HowToPlay = styled.div`
   padding-bottom: 1rem;
 
   h2 {
-    background-color: ${(props) => props.theme.colours.green};
+    background-color: ${(props) => props.theme.colours.teal};
     color: ${(props) => props.theme.colours.cream};
     display: inline-block;
     font-size: 1.2rem;
@@ -87,7 +87,7 @@ const HowToPlay = styled.div`
 
 const Footer = styled.footer`
   ${Section}
-  background-color: ${(props) => props.theme.colours.green};
+  background-color: ${(props) => props.theme.colours.teal};
   height: 4rem;
 
   a {

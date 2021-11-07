@@ -5,10 +5,10 @@ export const AppTheme: DefaultTheme = {
   colours: {
     // Brand Colours
     cream: '#f9f2ec',
-    purple: '#532b3a',
+    plum: '#532b3a',
     turquoise: '#57b6b2',
     turquoise_dark: '#095157',
-    green: '#025157',
+    teal: '#025157',
     pink: '#ffb1b8',
 
     // Secondary colours
@@ -156,7 +156,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    color: ${(props) => props.theme.colours.green};
+    color: ${(props) => props.theme.colours.teal};
     font-size: 100%;
     font-style: normal;
     font-weight: bold;
