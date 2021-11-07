@@ -3,16 +3,18 @@ import 'styled-components';
 declare module 'styled-components' {
   export interface DefaultTheme {
     colours: {
-      white: string;
       cream: string;
-      orange: string;
-      orange_dark: string;
+      plum: string;
+      turquoise: string;
+      turquoise_dark: string;
+      teal: string;
+      pink: string;
+
       blue: string;
-      green: string;
-      purple: string;
-      grey_dark: string;
-      grey_light: string;
-      black: string;
+      orange: string;
+
+      white: string;
+      grey: string;
     };
 
     screenSizes: {

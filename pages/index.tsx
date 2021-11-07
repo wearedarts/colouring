@@ -6,12 +6,13 @@ import { Container, Page, Section } from '../components/Layout';
 
 const Header = styled.header`
   ${Section}
-  background-color: ${(props) => props.theme.colours.orange};
-  flex-basis: 10rem;
+  background-color: ${(props) => props.theme.colours.teal};
+  flex-basis: 8rem;
+  border-top: 1rem solid ${(props) => props.theme.colours.turquoise};
 
   img {
     display: block;
-    height: 6rem;
+    height: 5rem;
   }
 `;
 
@@ -22,11 +23,6 @@ const Main = styled.main`
   h1 {
     font-size: 2.5rem;
     text-align: center;
-    margin: 2rem 0;
-  }
-
-  h2 {
-    font-size: 1.8rem;
     margin: 2rem 0;
   }
 `;
@@ -52,7 +48,7 @@ const GameArea = styled.div`
   a {
     align-items: center;
     align-self: flex-end;
-    background-color: ${(props) => props.theme.colours.green};
+    background-color: ${(props) => props.theme.colours.teal};
     color: ${(props) => props.theme.colours.cream};
     display: flex;
     font-weight: 500;
@@ -69,9 +65,29 @@ const GameArea = styled.div`
   }
 `;
 
+const HowToPlay = styled.div`
+  background-color: ${(props) => props.theme.colours.cream};
+  margin: 1rem auto;
+  max-width: 600px;
+  padding-bottom: 1rem;
+
+  h2 {
+    background-color: ${(props) => props.theme.colours.teal};
+    color: ${(props) => props.theme.colours.cream};
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  p {
+    margin: auto 1rem;
+  }
+`;
+
 const Footer = styled.footer`
   ${Section}
-  background-color: ${(props) => props.theme.colours.purple};
+  background-color: ${(props) => props.theme.colours.teal};
   height: 4rem;
 
   a {
@@ -91,13 +107,12 @@ export default function Index() {
   return (
     <Page>
       <Head>
-        <title>darts - colouring</title>
-        <link rel='icon' href='/favicon.ico' />
+        <title>colouring</title>
       </Head>
 
       <Header>
         <Container>
-          <img alt='darts' src='/darts-logo-cream.svg' />
+          <img alt='the point.' src='/the-point-logo-cream.svg' />
         </Container>
       </Header>
 
@@ -111,16 +126,16 @@ export default function Index() {
               </Link>
             </GameArea>
           </Content>
-          <div>
+          <HowToPlay>
             <h2>how to play</h2>
             <p>How to play information.</p>
             <p>More how to play information.</p>
-          </div>
+          </HowToPlay>
         </Container>
       </Main>
 
       <Footer>
-        <a href='https://wearedarts.org.uk/'>wearedarts.org.uk</a>
+        <a href='https://thepoint.org.uk/'>thepoint.org.uk</a>
       </Footer>
     </Page>
   );

@@ -4,16 +4,19 @@ import type { DefaultTheme } from 'styled-components';
 export const AppTheme: DefaultTheme = {
   colours: {
     // Brand Colours
-    white: '#ffffff',
     cream: '#f9f2ec',
-    orange: '#ff7f30',
-    orange_dark: '#cc5e20',
+    plum: '#532b3a',
+    turquoise: '#57b6b2',
+    turquoise_dark: '#095157',
+    teal: '#025157',
+    pink: '#ffb1b8',
+
+    // Secondary colours
     blue: '#425cc7',
-    green: '#095157',
-    purple: '#532b3a',
-    grey_dark: '#000000e6',
-    grey_light: '#3c3c3c',
-    black: '#00000033',
+    orange: '#ff7f30',
+
+    white: '#ffffff',
+    grey: '##3c3c3c',
   },
 
   screenSizes: {
@@ -140,8 +143,8 @@ export const GlobalStyle = createGlobalStyle`
   //
 
   body {
-    background-color: ${(props) => props.theme.colours.purple};
-    color: ${(props) => props.theme.colours.cream};
+    background-color: ${(props) => props.theme.colours.white};
+    color: ${(props) => props.theme.colours.grey};
     font-family: Poppins, sans-serif;
     font-size: 100%;
 
@@ -153,6 +156,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
+    color: ${(props) => props.theme.colours.teal};
     font-size: 100%;
     font-style: normal;
     font-weight: bold;
