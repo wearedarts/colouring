@@ -16,7 +16,7 @@ export const AppTheme: DefaultTheme = {
     orange: '#ff7f30',
 
     white: '#ffffff',
-    grey: '##3c3c3c',
+    grey: '#3c3c3c',
   },
 
   screenSizes: {
