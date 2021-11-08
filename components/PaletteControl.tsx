@@ -51,8 +51,12 @@ const ButtonRow = styled.div`
   max-width: 400px;
 `;
 
+const Spacer = styled.div`
+  height: 220px;
+`;
+
 const PaletteContainer = styled.div`
-  background-color: white;
+  background-color: ${(props) => props.theme.colours.cream};
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   bottom: 0;
@@ -70,19 +74,22 @@ export const PaletteControl = ({
   const currentPalette = palette || defaultPalette;
 
   return (
-    <PaletteContainer>
-      <ButtonRow>
-        {currentPalette?.map((col) => {
-          return (
-            <ColourButton
-              clicker={change}
-              colour={col}
-              currentColour={currentColour}
-              key={col.value}
-            />
-          );
-        })}
-      </ButtonRow>
-    </PaletteContainer>
+    <>
+      <Spacer />
+      <PaletteContainer>
+        <ButtonRow>
+          {currentPalette?.map((col) => {
+            return (
+              <ColourButton
+                clicker={change}
+                colour={col}
+                currentColour={currentColour}
+                key={col.value}
+              />
+            );
+          })}
+        </ButtonRow>
+      </PaletteContainer>
+    </>
   );
 };
