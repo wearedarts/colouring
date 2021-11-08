@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-import Image from '../public/colouring-images/Cathedral.svg';
+import Image from '../public/colouring-images/Doncaster Minster.svg';
 import { PaletteControl } from '../components/PaletteControl';
 import { Colour } from '../types';
 
