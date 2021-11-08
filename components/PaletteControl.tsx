@@ -11,32 +11,32 @@ interface paletteControlProps {
 
 const defaultPalette: Palette = [
   {
-    name: 'grey',
-    value: '#6B7280',
-  },
-  {
     name: 'red',
     value: '#EF4444',
-  },
-  {
-    name: 'orange',
-    value: '#F59E0B',
-  },
-  {
-    name: 'green',
-    value: '#10B981',
   },
   {
     name: 'blue',
     value: '#3B82F6',
   },
   {
+    name: 'yellow',
+    value: '#FBBF24',
+  },
+  {
+    name: 'green',
+    value: '#10B981',
+  },
+  {
+    name: 'orange',
+    value: '#FF922B',
+  },
+  {
     name: 'purple',
     value: '#8B5CF6',
   },
   {
-    name: 'pink',
-    value: '#EC4899',
+    name: 'grey',
+    value: '#343a40',
   },
   {
     name: 'white',
