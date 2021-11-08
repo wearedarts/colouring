@@ -4,3 +4,9 @@ export interface Colour {
 }
 
 export type Palette = Array<Colour>;
+
+export interface ImageData {
+  name: string;
+  page: string;
+  src: string;
+}

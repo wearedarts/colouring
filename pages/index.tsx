@@ -1,8 +1,13 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import styled from 'styled-components';
+import { NextPage, GetStaticProps } from 'next';
+import fs from 'fs';
+import path from 'path';
 
 import { Container, Page, Section } from '../components/Layout';
+import { ImageLink } from '../components/ImageLink';
+
+import { ImageData } from '../types';
 
 const Header = styled.header`
   ${Section}
@@ -28,39 +33,31 @@ const Main = styled.main`
 `;
 
 const Content = styled.div`
-  width: 100%;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  width: 100%;
 `;
 
-const GameArea = styled.div`
-  aspect-ratio: calc(4 / 3);
-  background-color: ${(props) => props.theme.colours.cream};
-  background-image: url(/preview.png);
-  margin: 1rem;
-  max-width: 800px;
-  width: 100%;
+const ImageList = styled.ul`
+  align-items: center;
+  align-items: stretch;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 2rem 0;
+  width: 100%;
 
-  a {
-    align-items: center;
-    align-self: flex-end;
-    background-color: ${(props) => props.theme.colours.teal};
-    color: ${(props) => props.theme.colours.cream};
-    display: flex;
-    font-weight: 500;
-    justify-content: center;
-    margin-bottom: 2rem;
-    text-decoration: none;
-    font-size: 2rem;
-    padding: 1rem 2rem;
+  li {
+    width: 100%;
 
-    &:focus {
-      outline: 3px solid ${(props) => props.theme.colours.orange};
-      outline-offset: 3px;
+    ${(props) => props.theme.screenSizes.phonePlus} {
+      width: calc(100% / 2);
+    }
+
+    ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
+      width: calc(100% / 3);
     }
   }
 `;
@@ -103,7 +100,11 @@ const Footer = styled.footer`
   }
 `;
 
-export default function Index() {
+interface IndexPageProps {
+  images: Array<ImageData>;
+}
+
+export const Index: NextPage<IndexPageProps> = ({ images }) => {
   return (
     <Page>
       <Head>
@@ -120,11 +121,20 @@ export default function Index() {
         <Container>
           <Content>
             <h1>colouring</h1>
-            <GameArea>
-              <Link href='/game' passHref>
-                Play
-              </Link>
-            </GameArea>
+            <h2>Choose a picture to colour:</h2>
+            <ImageList>
+              {images.map((image: ImageData) => {
+                return (
+                  <li key={image.name}>
+                    <ImageLink
+                      name={image.name}
+                      page={image.page}
+                      src={image.src}
+                    />
+                  </li>
+                );
+              })}
+            </ImageList>
           </Content>
           <HowToPlay>
             <h2>how to play</h2>
@@ -139,4 +149,34 @@ export default function Index() {
       </Footer>
     </Page>
   );
-}
+};
+
+export default Index;
+
+export const getStaticProps: GetStaticProps = async () => {
+  // Find where our colouring images are at build time
+  const imageLocation = path.join(process.cwd(), './public/colouring-images');
+
+  // Extract the filenames and check they are SVGs
+  const svgFiles: Array<string> = fs
+    .readdirSync(imageLocation)
+    .filter((file: string) => file.endsWith('.svg'));
+
+  const imageList = svgFiles.map((file: string) => {
+    const name = file.replace(/\.svg$/, '');
+    const path = name.toLocaleLowerCase().replace(/\s/, '-');
+    const publicURL = 'colouring-images/' + file;
+
+    return {
+      name: name,
+      page: path,
+      src: publicURL,
+    };
+  });
+
+  return {
+    props: {
+      images: imageList,
+    },
+  };
+};
