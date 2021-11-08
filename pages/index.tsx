@@ -127,9 +127,9 @@ export default function Index() {
             </GameArea>
           </Content>
           <HowToPlay>
-            <h2>how to play</h2>
-            <p>How to play information.</p>
-            <p>More how to play information.</p>
+            <h2>How to play</h2>
+            <p>Click on a colour, then click on a shape in the picture to colour it in.</p>
+            <p>You can change your colour each time to make the pictures as colourful as you like.</p>
           </HowToPlay>
         </Container>
       </Main>
