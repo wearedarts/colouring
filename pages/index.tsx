@@ -129,7 +129,7 @@ export default function Index() {
           <HowToPlay>
             <h2>How to play</h2>
             <p>Click on a colour, then click on a shape in the picture to colour it in.</p>
-            <p>You can change your colour each time to make the buildings as colourful as you like.</p>
+            <p>You can change your colour each time to make the pictures as colourful as you like.</p>
           </HowToPlay>
         </Container>
       </Main>
