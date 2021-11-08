@@ -18,7 +18,6 @@ const Button = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: ${(props) => props.theme.colours.cream};
   overflow: auto;
   aspect-ratio: 1;
   flex-basis: 25%;
