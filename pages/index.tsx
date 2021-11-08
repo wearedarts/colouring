@@ -46,13 +46,14 @@ const ImageList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 2rem 0;
+
   width: 100%;
 
   li {
+    margin: 1rem 0;
     width: 100%;
 
-    ${(props) => props.theme.screenSizes.phonePlus} {
+    ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
       width: calc(100% / 2);
     }
 
@@ -138,8 +139,14 @@ export const Index: NextPage<IndexPageProps> = ({ images }) => {
           </Content>
           <HowToPlay>
             <h2>How to play</h2>
-            <p>Click on a colour, then click on a shape in the picture to colour it in.</p>
-            <p>You can change your colour each time to make the pictures as colourful as you like.</p>
+            <p>
+              Click on a colour, then click on a shape in the picture to colour
+              it in.
+            </p>
+            <p>
+              You can change your colour each time to make the pictures as
+              colourful as you like.
+            </p>
           </HowToPlay>
         </Container>
       </Main>
