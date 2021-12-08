@@ -16,8 +16,11 @@ const Header = styled.header`
   border-top: 1rem solid ${(props) => props.theme.colours.turquoise};
 
   a {
-    display: inline-block;
-    vertical-align: middle;
+    display flex;
+    color: ${(props) => props.theme.colours.cream};
+    font-size: 2rem;
+    text-decoration: none;
+    align-items: flex-end;
 
     &:focus {
       outline: 3px solid ${(props) => props.theme.colours.orange};
@@ -28,6 +31,7 @@ const Header = styled.header`
   img {
     display: block;
     height: 5rem;
+    padding-right: 1rem;
   }
 `;
 
@@ -126,6 +130,7 @@ export const Index: NextPage<IndexPageProps> = ({ images }) => {
         <Container>
           <a href='https://darts-games.netlify.app/'>
             <img alt='the point.' src='/the-point-logo-cream.svg' />
+            <span>Games</span>
           </a>
         </Container>
       </Header>
