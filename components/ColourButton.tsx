@@ -13,22 +13,28 @@ interface colourButtonProps {
 const Button = styled.button`
   padding: 0;
   border: 1px solid ${(props) => props.theme.colours.grey};
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  overflow: auto;
+  overflow: hidden;
   aspect-ratio: 1;
-  flex-basis: 25%;
-  margin-bottom: 2px;
+  margin: 5px;
+  min-height: 44px;
+  min-width: 44px;
+  width: calc(20% - 10px);
+
+  ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
+    width: 80px;
+  }
 `;
 
 const Swatch = styled.div<{ bgCol: Colour; active: Boolean }>`
   background-color: ${(props) => props.bgCol.value};
   height: 100%;
   width: 100%;
-  border-radius: 0.8rem;
+  border-radius: 0.5rem;
   ${(props) =>
     props.active
       ? `border: 3px solid ${props.theme.colours.grey}`
