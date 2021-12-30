@@ -47,8 +47,6 @@ const defaultPalette: Palette = [
 const ButtonRow = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  max-width: 400px;
 `;
 
 const Spacer = styled.div`
@@ -56,14 +54,15 @@ const Spacer = styled.div`
 `;
 
 const PaletteContainer = styled.div`
-  background-color: ${(props) => props.theme.colours.cream};
+  background-color: ${(props) => props.theme.colours.white};
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+  border: 2px solid ${(props) => props.theme.colours.grey};
+  border-bottom: 0;
   bottom: 0;
-  max-width: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
   position: fixed;
-  width: 400px;
+  margin: auto;
 `;
 
 export const PaletteControl = ({
