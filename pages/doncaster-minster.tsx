@@ -47,7 +47,7 @@ export default function Game() {
   const [name, setName] = useState<string>('');
   const [title, setTitle] = useState<string>('');
 
-  const handleColor = (col: Colour) => {
+  const handleColour = (col: Colour) => {
     setColour(col);
   };
 
@@ -93,7 +93,7 @@ export default function Game() {
         {framed && name ? <Signature>by {name}</Signature> : null}
 
         {!framed ? (
-          <PaletteControl change={handleColor} currentColour={colour} />
+          <PaletteControl change={handleColour} currentColour={colour} />
         ) : null}
       </main>
 
