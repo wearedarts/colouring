@@ -1,12 +1,12 @@
-import Head from 'next/head';
-import styled from 'styled-components';
 import { NextPage, GetStaticProps } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+import styled from 'styled-components';
 import fs from 'fs';
 import path from 'path';
 
-import { Container, Page, Section } from '../components/Layout';
 import { ImageLink } from '../components/ImageLink';
-
+import { Container, Page, Section } from '../components/Layout';
 import { ImageData } from '../types';
 
 const Header = styled.header`
@@ -15,8 +15,16 @@ const Header = styled.header`
   flex-basis: 8rem;
   border-top: 1rem solid ${(props) => props.theme.colours.turquoise};
 
+  ${Container} {
+    display: flex;
+    justify-content: space-between;
+  }
+
   a {
-    display: inline-block;
+    align-self: end;
+    color: ${(props) => props.theme.colours.cream};
+    font-size: 2rem;
+    text-decoration: none;
     vertical-align: middle;
 
     &:focus {
@@ -124,9 +132,10 @@ export const Index: NextPage<IndexPageProps> = ({ images }) => {
 
       <Header>
         <Container>
-          <a href='https://darts-games.netlify.app/'>
+          <Link href='/' passHref>
             <img alt='the point.' src='/the-point-logo-cream.svg' />
-          </a>
+          </Link>
+          <a href='https://darts-games.netlify.app/'>More Games</a>
         </Container>
       </Header>
 
