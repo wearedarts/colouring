@@ -25,6 +25,12 @@ const Frame = styled.div<{ framed: boolean }>`
   ${(props) => props.framed && FrameStyles};
 `;
 
+const ImageContainer = styled.div`
+  svg {
+    max-height: 120vh;
+  }
+`;
+
 const Title = styled.h2`
   font-size: 2.5rem;
   margin: 2rem 0;
@@ -94,7 +100,7 @@ export default function Game({ svg, path }: GameProps) {
         {framed && title ? <Title>{title}</Title> : null}
 
         <Frame framed={framed}>
-          <div
+          <ImageContainer
             dangerouslySetInnerHTML={svg}
             onClick={(evt: React.MouseEvent<Element, MouseEvent>) => {
               if (framed) return;
