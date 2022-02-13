@@ -136,6 +136,8 @@ export const ArtistModal = ({
   const randomPhrase =
     palettePhrases[Math.floor(Math.random() * palettePhrases.length)];
 
+  ReactModal.setAppElement('#__next');
+
   return (
     <ReactModal isOpen={isOpen} style={modalStyles} contentLabel={'Your Art'}>
       <ModalLayout>

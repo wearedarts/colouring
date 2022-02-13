@@ -69,6 +69,8 @@ export const SaveModal = ({
   title,
   titleHandler,
 }: SaveModalProps): JSX.Element => {
+  ReactModal.setAppElement('#__next');
+
   return (
     <ReactModal isOpen={isOpen} style={modalStyles} contentLabel={'Your Art'}>
       <Title>Your Art</Title>
