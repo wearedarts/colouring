@@ -36,35 +36,6 @@ export const AppTheme: DefaultTheme = {
 export const GlobalStyle = createGlobalStyle`
 
   //
-  /* Fonts */
-  //
-
-  @font-face {
-    font-family: 'Poppins';
-    src: url('/Poppins-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: optional;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Poppins';
-    src: url('/Poppins-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: optional;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Poppins';
-    src: url('/Poppins-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: optional;
-    font-display: swap;
-  }
-
-
-  //
   /* Reset adapted from https://github.com/hankchizljaw/modern-css-reset */
   //
 
