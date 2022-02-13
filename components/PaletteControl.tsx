@@ -70,7 +70,18 @@ export const PaletteControl = ({
   currentColour,
   change,
 }: paletteControlProps) => {
-  const currentPalette = palette || defaultPalette;
+  // if we have a palette, spread white into it, otherwise give the default
+  const currentPalette = palette
+    ? [
+        ...palette,
+        ...[
+          {
+            name: 'white',
+            value: '#ffffff',
+          },
+        ],
+      ]
+    : defaultPalette;
 
   return (
     <>
