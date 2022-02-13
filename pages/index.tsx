@@ -56,7 +56,6 @@ const ImageList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
   width: 100%;
 
   li {
@@ -141,7 +140,7 @@ export const Index: NextPage<IndexPageProps> = ({ images }) => {
                   <li key={image.name}>
                     <ImageLink
                       name={image.name}
-                      page={image.page}
+                      page={`/palette/${image.page}`}
                       src={image.src}
                     />
                   </li>
@@ -183,12 +182,12 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const imageList = svgFiles.map((file: string) => {
     const name = file.replace(/\.svg$/, '');
-    const path = name.toLocaleLowerCase().replace(/\s/, '-');
+    // TODO, make URLs nice again, update page property
     const publicURL = 'colouring-images/' + file;
 
     return {
       name: name,
-      page: path,
+      page: name,
       src: publicURL,
     };
   });

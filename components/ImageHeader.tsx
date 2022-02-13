@@ -5,8 +5,9 @@ import { Container, Section } from './Layout';
 import { Arrow } from './Arrow';
 
 interface HeaderProps {
-  action: React.MouseEventHandler;
+  action?: React.MouseEventHandler;
   actionAvailable: Boolean;
+  link: string;
 }
 
 const Header = styled.header`
@@ -54,11 +55,12 @@ const Header = styled.header`
 export const ImageHeader = ({
   action,
   actionAvailable,
+  link,
 }: HeaderProps): JSX.Element => {
   return (
     <Header>
       <Container>
-        <Link href='/'>
+        <Link href={link}>
           <a>
             <Arrow />
             back

@@ -38,11 +38,12 @@ export const GlobalStyle = createGlobalStyle`
   //
   /* Fonts */
   //
+
   @font-face {
     font-family: 'Poppins';
     src: url('/Poppins-Regular.ttf') format('truetype');
     font-weight: 400;
-    font-style: normal;
+    font-style: optional;
     font-display: swap;
   }
 
@@ -50,7 +51,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins';
     src: url('/Poppins-Medium.ttf') format('truetype');
     font-weight: 500;
-    font-style: normal;
+    font-style: optional;
     font-display: swap;
   }
 
@@ -58,7 +59,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins';
     src: url('/Poppins-Bold.ttf') format('truetype');
     font-weight: 700;
-    font-style: normal;
+    font-style: optional;
     font-display: swap;
   }
 

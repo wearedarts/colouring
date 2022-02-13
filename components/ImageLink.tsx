@@ -30,7 +30,7 @@ const FlexLink = styled.a`
 
 export const ImageLink = ({ name, page, src }: ImageData) => {
   return (
-    <Link href={`/${page}`} passHref>
+    <Link href={`${page}`} passHref>
       <FlexLink>
         <img src={src} alt='' />
         <div>{name}</div>

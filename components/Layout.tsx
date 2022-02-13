@@ -16,7 +16,7 @@ export const Page = styled.div`
  */
 export const Container = styled.div`
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 var(--gutter-width);
 `;
 
