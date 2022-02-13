@@ -16,6 +16,12 @@ const Main = styled.main`
   margin: 4rem 0;
 `;
 
+const Title = styled.h1`
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 2rem 0;
+`;
+
 const PaletteFieldset = styled.fieldset`
   border: 0;
   display: flex;
@@ -34,6 +40,17 @@ const Instructions = styled.legend`
   height: 1rem;
 `;
 
+const LayoutSwitch = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+`;
+
 const Preview = styled.div`
   align-items: center;
   background-color: ${(props) => props.theme.colours.cream};
@@ -48,39 +65,11 @@ const Preview = styled.div`
   }
 `;
 
-const BigBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
-    align-items: flex-start;
-    flex-direction: row;
-  }
-`;
-
-const StartLink = styled.a`
-  background-color: ${(props) => props.theme.colours.blue};
-  border: none;
-  color: ${(props) => props.theme.colours.white};
-  cursor: pointer;
-  display: block;
-  font-weight: bold;
-  padding: 0.3rem 0.6rem;
-  text-decoration: none;
-`;
-
 const ImageContainer = styled.div`
   width: 100%;
   svg {
     max-height: 24rem;
   }
-`;
-
-const Title = styled.h1`
-  font-size: 2.5rem;
-  text-align: center;
-  margin: 2rem 0;
 `;
 
 const PaletteDisplay = styled.div`
@@ -97,12 +86,23 @@ const Swatch = styled.div<{ bgCol: Colour }>`
   border-radius: 0.5rem;
 `;
 
-interface GameProps {
+const StartLink = styled.a`
+  background-color: ${(props) => props.theme.colours.blue};
+  border: none;
+  color: ${(props) => props.theme.colours.white};
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  text-decoration: none;
+`;
+
+interface PaletteProps {
   svg: { __html: string };
   path: string;
 }
 
-export default function Game({ svg, path }: GameProps) {
+export default function Game({ svg, path }: PaletteProps) {
   const { palette, updatePalette } = useContext(PaletteContext);
 
   return (
@@ -111,7 +111,7 @@ export default function Game({ svg, path }: GameProps) {
       <Container>
         <Main>
           <Title>Choose your colours</Title>
-          <BigBox>
+          <LayoutSwitch>
             <PaletteFieldset>
               <Instructions>Select up to 7 colours</Instructions>
               {allColours
@@ -144,7 +144,7 @@ export default function Game({ svg, path }: GameProps) {
                 <StartLink>Start Colouring!</StartLink>
               </Link>
             </Preview>
-          </BigBox>
+          </LayoutSwitch>
         </Main>
       </Container>
     </Page>

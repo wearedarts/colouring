@@ -25,7 +25,7 @@ export const PaletteProvider: FC = ({ children }) => {
     if (currentItems.includes(input)) {
       setPalette(currentItems.filter((item) => item !== input));
     }
-    // We're adding
+    // We're adding a new colour
     else {
       if (currentItems.length < 7) {
         currentItems.push(input);
