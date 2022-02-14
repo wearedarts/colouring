@@ -1,26 +1,17 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: [
-        {
-          loader: '@svgr/webpack',
-          options: {
-            throwIfNamespace: false,
-            svgoConfig: {
-              plugins: [
-                {
-                  mergePaths: false,
-                },
-              ],
-            },
-          },
-        },
-      ],
-    });
-
-    return config;
-  },
   reactStrictMode: true,
+  async headers() {
+    return [
+      {
+        source: '/\\*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, immutable, max-age=31536000',
+          },
+        ],
+      },
+    ];
+  },
 };
