@@ -1,10 +1,11 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import styled from 'styled-components';
 import fs from 'fs';
 import path from 'path';
 
+import { ArtistModal } from '../../components/ArtistModal';
 import { PaletteContext } from '../../context/PaletteProvider';
 import { ColourCheckbox } from '../../components/ColourCheckbox';
 import { ImageHeader } from '../../components/ImageHeader';
@@ -13,7 +14,7 @@ import { allColours } from '../../all-colours';
 import { Colour } from '../../types';
 
 const Main = styled.main`
-  margin: 4rem 0;
+  margin-top: 4rem;
 `;
 
 const Title = styled.h1`
@@ -41,9 +42,9 @@ const Instructions = styled.legend`
 `;
 
 const LayoutSwitch = styled.div`
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
     align-items: flex-start;
@@ -104,6 +105,11 @@ interface PaletteProps {
 
 export default function Game({ svg, path }: PaletteProps) {
   const { palette, updatePalette } = useContext(PaletteContext);
+  const [modalIsOpen, setIsOpen] = useState<boolean>(true);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   return (
     <Page>
@@ -144,6 +150,7 @@ export default function Game({ svg, path }: PaletteProps) {
                 <StartLink>Start Colouring!</StartLink>
               </Link>
             </Preview>
+            <ArtistModal close={closeModal} isOpen={modalIsOpen} />
           </LayoutSwitch>
         </Main>
       </Container>
