@@ -82,7 +82,7 @@ export const SaveModal = ({
             value={name}
             onChange={nameHandler}
             type='text'
-            maxLength={20}
+            maxLength={50}
           />
         </LabelInput>
         <LabelInput>
@@ -92,7 +92,7 @@ export const SaveModal = ({
             value={title}
             onChange={titleHandler}
             type='text'
-            maxLength={30}
+            maxLength={50}
           />
         </LabelInput>
         <Controls>
