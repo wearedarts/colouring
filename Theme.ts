@@ -6,7 +6,6 @@ export const AppTheme: DefaultTheme = {
     // Brand Colours
     cream: '#f9f2ec',
     plum: '#532b3a',
-    turquoise: '#57b6b2',
     teal: '#025157',
     pink: '#ffb1b8',
 

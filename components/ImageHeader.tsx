@@ -39,7 +39,7 @@ const Header = styled.header`
   }
 
   button {
-    background-color: ${(props) => props.theme.colours.turquoise};
+    background-color: ${(props) => props.theme.colours.cream};
     border: none;
     color: ${(props) => props.theme.colours.plum};
     cursor: pointer;
