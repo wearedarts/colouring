@@ -111,7 +111,7 @@ const SpeechBubble = styled.div`
   }
 
   button {
-    background-color: ${(props) => props.theme.colours.blue};
+    background-color: ${(props) => props.theme.colours.teal};
     border: none;
     bottom: -1.5rem;
     color: ${(props) => props.theme.colours.white};

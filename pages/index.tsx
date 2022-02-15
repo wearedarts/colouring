@@ -12,8 +12,7 @@ import { ImageData } from '../types';
 const Header = styled.header`
   ${Section}
   background-color: ${(props) => props.theme.colours.teal};
-  flex-basis: 8rem;
-  border-top: 1rem solid ${(props) => props.theme.colours.turquoise};
+  flex-basis: 10rem;
 
   ${Container} {
     display: flex;
@@ -102,7 +101,7 @@ const HowToPlay = styled.div`
 
 const Footer = styled.footer`
   ${Section}
-  background-color: ${(props) => props.theme.colours.teal};
+  background-color: ${(props) => props.theme.colours.plum};
   height: 4rem;
 
   a {

@@ -6,11 +6,9 @@ declare module 'styled-components' {
       cream: string;
       plum: string;
       turquoise: string;
-      turquoise_dark: string;
       teal: string;
       pink: string;
 
-      blue: string;
       orange: string;
 
       white: string;
