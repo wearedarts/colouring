@@ -28,6 +28,7 @@ const Frame = styled.div<{ framed: boolean }>`
 const ImageContainer = styled.div`
   svg {
     max-height: 120vh;
+    width: 100%;
   }
 `;
 

@@ -69,6 +69,7 @@ const ImageContainer = styled.div`
   width: 100%;
   svg {
     max-height: 24rem;
+    width: 100%;
   }
 `;
 
