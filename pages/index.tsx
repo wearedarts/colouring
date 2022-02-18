@@ -15,17 +15,22 @@ const Header = styled.header`
   flex-basis: 8rem;
   border-top: 1rem solid ${(props) => props.theme.colours.turquoise};
 
-  ${Container} {
+  div {
+    align-items: center;
     display: flex;
     justify-content: space-between;
   }
 
   a {
-    align-self: end;
     color: ${(props) => props.theme.colours.cream};
-    font-size: 2rem;
+    flex: 0;
+    font-size: 1.5rem;
     text-decoration: none;
     vertical-align: middle;
+
+    ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
+      font-size: 2rem;
+    }
 
     &:focus {
       outline: 3px solid ${(props) => props.theme.colours.orange};
