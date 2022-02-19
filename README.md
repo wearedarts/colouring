@@ -2,15 +2,25 @@
 
 Netlify staging site: [https://darts-colouring.netlify.app/](https://darts-colouring.netlify.app/)
 
-## Adding New Images
+## Making updates
+
+### Adding New Images
 
 - Create an image in SVG format
-- Name the image as you would like its name to appear in the game menu
+- Name the image as you would like its name to appear in the game menu (e.g. Flowers in a Vase.svg)
 - Optionally use [SVGOMG](https://jakearchibald.github.io/svgomg/) to optimise the image to reduce its size
 - Go to [/public/colouring-images](/public/colouring-images)
 - Use the Add file menu to add the image
 
 The only supported format for images is SVG. The app works by changing the fill colour of elements within the image, so each shape to colour in should be a separate shape/path with a white fill and black stroke colour.
+
+### Changing Artist Phrases
+
+- Head to [/artist-phrases](/artist-phrases.ts)
+- Use the pencil icon to edit the file
+- Update or add to the text in the list
+- Make sure to put `'` around the phrase and a `,` at the end
+- Chose "Commit directly to the `main` branch." and press `Commit changes`
 
 ## Development
 
