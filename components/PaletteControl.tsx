@@ -11,32 +11,32 @@ interface paletteControlProps {
 
 const defaultPalette: Palette = [
   {
-    name: 'red',
-    value: '#EF4444',
+    name: 'RED 7',
+    value: '#f03e3e',
   },
   {
-    name: 'blue',
-    value: '#3B82F6',
+    name: 'BLUE 7',
+    value: '#1c7ed6',
   },
   {
-    name: 'yellow',
-    value: '#FBBF24',
+    name: 'YELLOW 7',
+    value: '#f59f00',
   },
   {
-    name: 'green',
-    value: '#10B981',
+    name: 'GREEN 7',
+    value: '#37b24d',
   },
   {
-    name: 'orange',
-    value: '#FF922B',
+    name: 'ORANGE 7',
+    value: '#f76707',
   },
   {
-    name: 'purple',
-    value: '#8B5CF6',
+    name: 'VIOLET 7',
+    value: '#7048e8',
   },
   {
-    name: 'grey',
-    value: '#343a40',
+    name: 'GRAY 7',
+    value: '#495057',
   },
   {
     name: 'white',
@@ -71,7 +71,7 @@ export const PaletteControl = ({
   change,
 }: paletteControlProps) => {
   // if we have a palette, spread white into it, otherwise give the default
-  const currentPalette = palette
+  const currentPalette = palette?.length
     ? [
         ...palette,
         ...[
