@@ -12,6 +12,7 @@ import { ImageHeader } from '../../components/ImageHeader';
 import { Container, Page } from '../../components/Layout';
 import { allColours } from '../../all-colours';
 import { Colour } from '../../types';
+import { colourFilter } from '../../colour-filter';
 
 const Main = styled.main`
   margin-top: 4rem;
@@ -121,24 +122,16 @@ export default function Game({ svg, path }: PaletteProps) {
           <LayoutSwitch>
             <PaletteFieldset>
               <Instructions>Select up to 7 colours</Instructions>
-              {allColours
-                ?.filter((element) => {
-                  return (
-                    element.name.includes('3') ||
-                    element.name.includes('5') ||
-                    element.name.includes('7')
-                  );
-                })
-                .map((col) => {
-                  return (
-                    <ColourCheckbox
-                      colour={col}
-                      key={col.value}
-                      onChange={() => updatePalette(col)}
-                      checked={palette.includes(col)}
-                    />
-                  );
-                })}
+              {allColours?.filter(colourFilter).map((col) => {
+                return (
+                  <ColourCheckbox
+                    colour={col}
+                    key={col.value}
+                    onChange={() => updatePalette(col)}
+                    checked={palette.includes(col)}
+                  />
+                );
+              })}
             </PaletteFieldset>
             <Preview>
               <ImageContainer dangerouslySetInnerHTML={svg} />

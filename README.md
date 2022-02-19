@@ -22,6 +22,26 @@ The only supported format for images is SVG. The app works by changing the fill 
 - Make sure to put `'` around the phrase and a `,` at the end
 - Chose "Commit directly to the `main` branch." and press `Commit changes`
 
+### Updating Colours
+
+For a list of all the colours available to the app, visit the [All Colours](https://darts-colouring.netlify.app/all-colours) page.
+
+To change the selection of these that are shown in the palette chooser:
+
+- Go to [/colour-filter](/colour-filter.ts)
+- Use the pencil icon to edit the file
+- There is a function here that filters down all the colours by their name
+- The `||` means or, so this example matches any colour that has a 3 or a 5 or a 7 in its name
+
+```
+    colour.name.includes('3') ||
+    colour.name.includes('5') ||
+    colour.name.includes('7')
+```
+
+- Update the numbers, or add specific colours like `colour.name.includes('GREEN 4')`, making sure to put `||` between each case
+- Chose "Commit directly to the `main` branch." and press `Commit changes`
+
 ## Development
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and TypeScript.
