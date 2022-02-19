@@ -11,18 +11,19 @@ interface colourButtonProps {
 }
 
 const Button = styled.button`
-  padding: 0;
-  border: 1px solid ${(props) => props.theme.colours.grey};
-  border-radius: 0.5rem;
   align-items: center;
+  aspect-ratio: 1;
+  border-radius: 0.5rem;
+  border: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  overflow: hidden;
-  aspect-ratio: 1;
   margin: 5px;
   min-height: 44px;
   min-width: 44px;
+  outline: 1px solid ${(props) => props.theme.colours.grey};
+  overflow: hidden;
+  padding: 0;
   width: calc(20% - 10px);
 
   ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
@@ -37,7 +38,7 @@ const Swatch = styled.div<{ bgCol: Colour; active: Boolean }>`
   border-radius: 0.5rem;
   ${(props) =>
     props.active
-      ? `border: 3px solid ${props.theme.colours.grey}`
+      ? `border: 5px solid ${props.theme.colours.grey}; box-shadow: inset 0px 0px 0 2px ${props.theme.colours.white};`
       : `border: 3px solid transparent`}
 `;
 
