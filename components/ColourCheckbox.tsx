@@ -27,7 +27,7 @@ const Input = styled.input`
   border: 0;
 
   &:focus ~ ${Swatch} {
-    outline: 2px dashed ${(props) => props.theme.colours.blue};
+    outline: 2px dashed ${(props) => props.theme.colours.teal};
     outline-offset: 4px;
   }
 

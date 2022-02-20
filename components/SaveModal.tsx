@@ -42,7 +42,7 @@ const Controls = styled.div`
   flex-direction: column;
 
   button {
-    background-color: ${(props) => props.theme.colours.blue};
+    background-color: ${(props) => props.theme.colours.teal};
     border: none;
     color: ${(props) => props.theme.colours.white};
     font-weight: bold;

@@ -5,7 +5,7 @@ import styled from 'styled-components';
  */
 export const Page = styled.div`
   align-items: center;
-  background-color: ${(props) => props.theme.colours.white};
+  background-color: ${(props) => props.theme.colours.pink};
   display: flex;
   flex-direction: column;
   min-height: 100vh;

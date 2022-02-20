@@ -12,8 +12,7 @@ import { ImageData } from '../types';
 const Header = styled.header`
   ${Section}
   background-color: ${(props) => props.theme.colours.teal};
-  flex-basis: 8rem;
-  border-top: 1rem solid ${(props) => props.theme.colours.turquoise};
+  flex-basis: 10rem;
 
   div {
     align-items: center;
@@ -72,15 +71,23 @@ const ImageList = styled.ul`
   width: 100%;
 
   li {
+    border: 3px solid;
+    border-width: min(6vh,8vw);
+    border-image-source: url(frame.svg);
+    border-image-slice: 12%;
     margin: 1rem 0;
-    width: 100%;
+    width: 95%;
 
     ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
-      width: calc(100% / 2);
+      width: calc(95% / 2);
     }
 
     ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
-      width: calc(100% / 3);
+      width: calc(95% / 3);
+    }
+
+    a {
+      margin: 0;
     }
   }
 `;
@@ -107,7 +114,7 @@ const HowToPlay = styled.div`
 
 const Footer = styled.footer`
   ${Section}
-  background-color: ${(props) => props.theme.colours.teal};
+  background-color: ${(props) => props.theme.colours.plum};
   height: 4rem;
 
   a {

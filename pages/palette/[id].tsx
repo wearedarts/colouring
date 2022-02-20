@@ -43,8 +43,11 @@ const Instructions = styled.legend`
 
 const LayoutSwitch = styled.div`
   align-items: center;
+  background-color: ${(props) => props.theme.colours.white};
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
+  padding: 1rem;
 
   ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
     align-items: flex-start;
@@ -89,7 +92,7 @@ const Swatch = styled.div<{ bgCol: Colour }>`
 `;
 
 const StartLink = styled.a`
-  background-color: ${(props) => props.theme.colours.blue};
+  background-color: ${(props) => props.theme.colours.teal};
   border: none;
   color: ${(props) => props.theme.colours.white};
   cursor: pointer;

@@ -13,8 +13,7 @@ interface HeaderProps {
 const Header = styled.header`
   ${Section}
   background-color: ${(props) => props.theme.colours.teal};
-  border-top: 1rem solid ${(props) => props.theme.colours.turquoise};
-  height: 5rem;
+  height: 6rem;
 
   ${Container} {
     display: flex;
@@ -40,9 +39,10 @@ const Header = styled.header`
   }
 
   button {
-    background-color: ${(props) => props.theme.colours.blue};
+    background-color: ${(props) => props.theme.colours.cream};
     border: none;
-    color: ${(props) => props.theme.colours.white};
+    color: ${(props) => props.theme.colours.plum};
+    cursor: pointer;
     font-weight: bold;
     padding: 0.3rem 0.6rem;
   }

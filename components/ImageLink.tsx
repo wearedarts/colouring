@@ -24,7 +24,7 @@ const FlexLink = styled.a`
 
   div {
     color: ${(props) => props.theme.colours.cream};
-    background-color: ${(props) => props.theme.colours.blue};
+    background-color: ${(props) => props.theme.colours.teal};
   }
 `;
 
