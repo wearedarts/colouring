@@ -1,4 +1,3 @@
-import { redirect } from 'next/dist/server/api-utils';
 import ReactModal from 'react-modal';
 import styled from 'styled-components';
 
@@ -31,7 +30,7 @@ const modalStyles = {
     background: 'transparent',
     border: '0',
     display: 'flex',
-    height: '100%',
+    height: 'calc(100% - 8rem)',
     inset: 'auto 50% 0 0%',
     justifyContent: 'center',
     margin: 'auto',
@@ -39,8 +38,7 @@ const modalStyles = {
     width: '100%',
   },
   overlay: {
-    // We could remove the overlay colour with the following:
-    // background: 'transparent',
+    top: '8rem',
   },
 };
 
@@ -49,7 +47,7 @@ const ModalLayout = styled.div`
   align-items: flex-end;
   display: flex;
   flex-direction: column-reverse;
-  height: 50%;
+  height: 80%;
   justify-content: flex-start;
   padding: 0 1rem;
 
