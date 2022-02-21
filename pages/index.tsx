@@ -72,22 +72,18 @@ const ImageList = styled.ul`
 
   li {
     border: 3px solid;
-    border-width: min(6vh,8vw);
+    border-width: min(6vh, 12vw);
     border-image-source: url(frame.svg);
     border-image-slice: 12%;
-    margin: 1rem 0;
-    width: 95%;
+    margin: 2rem 1rem;
+    width: calc(100% - 2rem);
 
     ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
-      width: calc(95% / 2);
+      width: calc(100% / 2);
     }
 
     ${(props) => props.theme.screenSizes.tabletLandscapePlus} {
-      width: calc(95% / 3);
-    }
-
-    a {
-      margin: 0;
+      width: calc((100% / 3) - 2rem);
     }
   }
 `;

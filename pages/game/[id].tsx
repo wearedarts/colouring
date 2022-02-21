@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import styled from 'styled-components';
 import type { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
 import fs from 'fs';
 import path from 'path';
 
@@ -89,6 +90,10 @@ export default function Game({ svg, path }: GameProps) {
 
   return (
     <>
+      <Head>
+        <title>colouring</title>
+      </Head>
+
       <VisuallyHidden>
         <h1>Colouring Image</h1>
       </VisuallyHidden>

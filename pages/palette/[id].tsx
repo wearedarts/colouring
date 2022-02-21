@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react';
 import type { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
 import fs from 'fs';
@@ -119,6 +120,10 @@ export default function Palette({ svg, path }: PaletteProps) {
 
   return (
     <Page>
+      <Head>
+        <title>colouring</title>
+      </Head>
+
       <ImageHeader actionAvailable={false} link='/' />
       <Container>
         <Main>
