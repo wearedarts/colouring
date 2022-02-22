@@ -1,5 +1,7 @@
 # Colouring
 
+ [![Netlify Status](https://api.netlify.com/api/v1/badges/906a8f00-ddb2-49d9-8b0a-37ec3c5b42c6/deploy-status)](https://app.netlify.com/sites/darts-colouring/deploys)
+
 Netlify staging site: [https://darts-colouring.netlify.app/](https://darts-colouring.netlify.app/)
 
 ## Making updates
