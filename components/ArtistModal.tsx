@@ -30,7 +30,7 @@ const modalStyles = {
     background: 'transparent',
     border: '0',
     display: 'flex',
-    height: 'calc(100% - 8rem)',
+    height: 'calc(100% - 6rem)',
     inset: 'auto 50% 0 0%',
     justifyContent: 'center',
     margin: 'auto',
@@ -38,7 +38,7 @@ const modalStyles = {
     width: '100%',
   },
   overlay: {
-    top: '8rem',
+    top: '6rem',
   },
 };
 
@@ -123,6 +123,11 @@ const SpeechBubble = styled.div`
   }
 `;
 
+const Text = styled.div`
+  overflow-y: auto;
+  max-height: 100%;
+`;
+
 /**
  * Display a dismissible hint from an artist friend
  */
@@ -141,7 +146,7 @@ export const ArtistModal = ({
       <ModalLayout>
         <img src={randomArtist.src} alt={`{randomArtist.name}'s artist tip.`} />
         <SpeechBubble>
-          <div>{randomPhrase}</div>
+          <Text>{randomPhrase}</Text>
           <button onClick={(e) => close(e)}>OK!</button>
         </SpeechBubble>
       </ModalLayout>

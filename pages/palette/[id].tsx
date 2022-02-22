@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react';
 import type { GetStaticPaths, GetStaticProps } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components';
 import fs from 'fs';
@@ -47,7 +48,7 @@ const LayoutSwitch = styled.div`
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 1rem 0;
 
   ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
     align-items: flex-start;
@@ -62,6 +63,8 @@ const Preview = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: calc(2rem + 5px);
+  margin-left: 1rem;
+  margin-right: 1rem;
   padding: 1rem;
 
   ${(props) => props.theme.screenSizes.tabletPortraitPlus} {
@@ -107,7 +110,7 @@ interface PaletteProps {
   path: string;
 }
 
-export default function Game({ svg, path }: PaletteProps) {
+export default function Palette({ svg, path }: PaletteProps) {
   const { palette, updatePalette } = useContext(PaletteContext);
   const [modalIsOpen, setIsOpen] = useState<boolean>(true);
 
@@ -117,6 +120,10 @@ export default function Game({ svg, path }: PaletteProps) {
 
   return (
     <Page>
+      <Head>
+        <title>colouring</title>
+      </Head>
+
       <ImageHeader actionAvailable={false} link='/' />
       <Container>
         <Main>
